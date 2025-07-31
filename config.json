@@ -1,0 +1,28 @@
+{
+  "unsplash_key": {
+    "title": "Unsplash Access Key",
+    "type": "text",
+    "default": ""
+  },
+  "daily_limit": {
+    "title": "Daily download limit",
+    "type": "number",
+    "default": 50,
+    "min": 1,
+    "max": 1000
+  },
+  "slideshow_delay": {
+    "title": "Slideshow delay (seconds)",
+    "type": "number",
+    "default": 10,
+    "min": 1,
+    "max": 3600
+  },
+  "rotation": {
+    "title": "Display rotation (degrees)",
+    "type": "number",
+    "default": 0,
+    "min": 0,
+    "max": 360
+  }
+}
