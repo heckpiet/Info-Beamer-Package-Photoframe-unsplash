@@ -39,7 +39,7 @@ This Info-Beamer package is designed to provide a rich and highly customizable p
     * **Adjustable transition speed** (e.g., slow, medium, fast).
 * **Customizable Date & Time Overlay:**
     * Display current date and time at **user-defined positions** (coordinates or preset locations like top-left, bottom-right).
-    * **Full customization** of font, color, and text formatting.
+    * **Adjust color and enable/disable** the overlay directly from the package configuration.
 * **Display Orientation & Mirroring:**
     * Rotate the display content in **fixed increments (45°, 90°, 180°, 360°)**. Default orientation is Landscape 180°.
     * Enable **free rotation** by specifying a precise degree value.
