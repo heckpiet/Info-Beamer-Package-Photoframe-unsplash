@@ -24,5 +24,29 @@
     "default": 0,
     "min": 0,
     "max": 360
+  },
+  "show_clock": {
+    "title": "Show date/time overlay",
+    "type": "toggle",
+    "default": true
+  },
+  "clock_pos_x": {
+    "title": "Clock X position",
+    "type": "number",
+    "default": 10,
+    "min": 0,
+    "max": 4096
+  },
+  "clock_pos_y": {
+    "title": "Clock Y position",
+    "type": "number",
+    "default": 10,
+    "min": 0,
+    "max": 4096
+  },
+  "clock_color": {
+    "title": "Clock color",
+    "type": "color",
+    "default": "#ffffffff"
   }
 }

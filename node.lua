@@ -13,6 +13,20 @@ Released under the GPLv3 license.
 local json = require "json"
 local CONFIG = json.decode(resource.load_file("config.json"))
 FONT = resource.load_font("Roboto-Regular.ttf")
+
+local function parse_color(hex)
+    local r = tonumber(hex:sub(2,3), 16) / 255
+    local g = tonumber(hex:sub(4,5), 16) / 255
+    local b = tonumber(hex:sub(6,7), 16) / 255
+    local a = tonumber(hex:sub(8,9), 16) / 255
+    return r, g, b, a
+end
+
+local rotation = CONFIG.rotation.value or 0
+local show_clock = CONFIG.show_clock.value
+local clock_x = CONFIG.clock_pos_x.value or 10
+local clock_y = CONFIG.clock_pos_y.value or 10
+local clock_r, clock_g, clock_b, clock_a = parse_color(CONFIG.clock_color.value or "#ffffffff")
 local image_list = {}
 local idx = 1
 local last_switch = sys.now()
@@ -54,9 +68,21 @@ function node.render()
         last_switch = sys.now()
     end
     gl.clear(0, 0, 0, 1)
+
+    gl.pushMatrix()
+    gl.translate(NATIVE_WIDTH/2, NATIVE_HEIGHT/2)
+    gl.rotate(rotation)
+    gl.translate(-NATIVE_WIDTH/2, -NATIVE_HEIGHT/2)
+
     local img = image_list[idx]
     if img then
         img:draw(0, 0, NATIVE_WIDTH, NATIVE_HEIGHT, 1)
+    end
+    gl.popMatrix()
+
+    if show_clock then
+        local now = os.date("%Y-%m-%d %H:%M:%S")
+        FONT:write(clock_x, clock_y, now, 30, clock_r, clock_g, clock_b, clock_a)
     end
     if offline then
         local msg = "OFFLINE MODE"
