@@ -1,7 +1,5 @@
 # Unsplash Photoframe Package for Info-Beamer
 
-![Unsplash Photoframe Banner](link_to_your_banner_image.png)
-
 This package fetches captivating images from [Unsplash](https://unsplash.com), a leading platform for freely-usable photos, and transforms your Info-Beamer device into a dynamic, customizable digital photo frame. Leveraging the Unsplash API, it displays a beautiful slideshow, complete with advanced customization options and robust offline capabilities.
 
 ---
@@ -77,7 +75,7 @@ For more detailed setup instructions and advanced configurations, please refer t
 
 ## Contributing
 
-We welcome contributions! If you have ideas for new features, improvements, or bug fixes, please open an issue or submit a pull request on our [GitHub repository](https://github.com/your-github-username/unsplash-photoframe-package).
+We welcome contributions! If you have ideas for new features, improvements, or bug fixes, please open an issue or submit a pull request.
 
 ---
 
@@ -86,5 +84,3 @@ We welcome contributions! If you have ideas for new features, improvements, or b
 This project is released under the terms of the **GPL-3.0 License**. See the `LICENSE` file for more details.
 
 ---
-
-**[GitHub Repository](https://github.com/your-github-username/unsplash-photoframe-package)**
