@@ -1,0 +1,8 @@
+{
+  "id": "unsplash-photoframe",
+  "name": "Unsplash Photoframe",
+  "description": "Displays photos from Unsplash with offline cache.",
+  "author": "Example Author",
+  "version": "1.0.0",
+  "main": "node.lua"
+}

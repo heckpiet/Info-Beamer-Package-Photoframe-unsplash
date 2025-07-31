@@ -16,6 +16,12 @@ FONT = resource.load_font("Roboto-Regular.ttf")
 local image_list = {}
 local idx = 1
 local last_switch = sys.now()
+local offline = false
+
+local function check_offline()
+    local status, data = pcall(resource.load_file, "offline.flag")
+    offline = status and data ~= nil
+end
 
 function reload_images()
     image_list = {}
@@ -29,6 +35,9 @@ end
 node.event("file_change", function(filename)
     if filename:match("images/.*%.jpg") then
         reload_images()
+    end
+    if filename == "offline.flag" then
+        check_offline()
     end
 end)
 
@@ -49,6 +58,12 @@ function node.render()
     if img then
         img:draw(0, 0, NATIVE_WIDTH, NATIVE_HEIGHT, 1)
     end
+    if offline then
+        local msg = "OFFLINE MODE"
+        local w = math.floor(NATIVE_WIDTH / 2 - FONT:width(msg, 30) / 2)
+        FONT:write(w, 30, msg, 30, 1, 0, 0, 1)
+    end
 end
 
 reload_images()
+check_offline()
