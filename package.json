@@ -1,0 +1,7 @@
+{
+  "name": "unsplash-photoframe",
+  "version": "1.0.0",
+  "description": "Info-Beamer package fetching images from Unsplash",
+  "license": "GPL-3.0-or-later",
+  "main": "node.lua"
+}

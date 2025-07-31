@@ -67,7 +67,7 @@ Getting your Unsplash Photoframe up and running is straightforward:
 1.  **Obtain API Keys:** Get your Unsplash API Key and Secret from the [Unsplash API Documentation](https://unsplash.com/documentation).
 2.  **Configure:** Access the package's configuration page on your Info-Beamer node to input your API keys, set display preferences, choose categories, and define layouts.
 3.  **Deployment:** Deploy this package directory to your Info-Beamer device. For instructions, refer to the [Info-Beamer documentation on building packages](https://info-beamer.com/doc/building-packages).
-4.  **Run:** Start the package on your Info-Beamer node.
+4.  **Run:** Execute `fetch_unsplash.py` regularly (e.g., via cron) to download new images and then start the package on your Info-Beamer node.
 
 For more detailed setup instructions and advanced configurations, please refer to the comments within the code.
 
